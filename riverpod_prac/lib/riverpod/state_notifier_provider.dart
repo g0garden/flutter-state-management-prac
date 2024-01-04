@@ -2,19 +2,19 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_prac/model/shopping_item_model.dart';
 
 //2. provider로 만들어야 위젯에서쓰니까
-// <State 관리하는 notifier 뭔지, 어떤 state를 관리하는지> 넘겨주기
+//provider에 notifier연결해주자 <State 관리하는 notifier 뭔지, 어떤 state를 관리하는지> 넘겨주기
 
 final shoppingListProvider =
     StateNotifierProvider<ShoppingListNotifier, List<ShoppingItemModel>>(
   (ref) => ShoppingListNotifier(),
 );
 
-//1. notifier 만들기
+//1. 상태관리하는 notifier 만들기
 class ShoppingListNotifier extends StateNotifier<List<ShoppingItemModel>> {
   //생성자
   ShoppingListNotifier()
       : super([
-          //초기값
+          //관리할 state
           ShoppingItemModel(
               name: '김치', quantity: 2, hasBought: true, isSpicy: false),
           ShoppingItemModel(
