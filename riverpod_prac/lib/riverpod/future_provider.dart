@@ -7,5 +7,7 @@ final multiplesFutureProvider = FutureProvider<List<int>>((ref) async {
     ),
   );
 
+  //throw Exception('Exception 에러입니다.');
+
   return [1, 2, 3, 4, 5];
 });

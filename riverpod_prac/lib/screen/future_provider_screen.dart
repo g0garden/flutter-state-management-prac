@@ -8,6 +8,7 @@ class FutureProviderScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    //이 state는 AsyncValue임 => 그니까 .when의 각각의 상태에 맞게 함수 실행할수있음
     final state = ref.watch(multiplesFutureProvider);
 
     return DefaultLayout(
