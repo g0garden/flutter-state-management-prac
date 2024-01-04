@@ -3,6 +3,7 @@ import 'package:riverpod_prac/layout/default_layout.dart';
 import 'package:riverpod_prac/screen/future_provider_screen.dart';
 import 'package:riverpod_prac/screen/state_notifier_provider_screen.dart';
 import 'package:riverpod_prac/screen/state_provider_screen.dart';
+import 'package:riverpod_prac/screen/stream_provider_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -32,7 +33,14 @@ class HomeScreen extends StatelessWidget {
                 builder: (_) => FutureProviderScreen(),
               ));
             },
-            child: Text('FutureProviderScreen'))
+            child: Text('StreamProviderScreen')),
+        ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (_) => StreamProviderScreen(),
+              ));
+            },
+            child: Text('StreamProviderScreen'))
       ]),
     );
   }
