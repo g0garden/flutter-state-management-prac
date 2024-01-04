@@ -4,6 +4,7 @@ import 'package:riverpod_prac/screen/auto_dispose_modifier_screen.dart';
 import 'package:riverpod_prac/screen/family_modifier_screen.dart';
 import 'package:riverpod_prac/screen/future_provider_screen.dart';
 import 'package:riverpod_prac/screen/listen_provider_screen.dart';
+import 'package:riverpod_prac/screen/select_provider_screen.dart';
 import 'package:riverpod_prac/screen/state_notifier_provider_screen.dart';
 import 'package:riverpod_prac/screen/state_provider_screen.dart';
 import 'package:riverpod_prac/screen/stream_provider_screen.dart';
@@ -64,7 +65,14 @@ class HomeScreen extends StatelessWidget {
                 builder: (_) => ListenProviderScreen(),
               ));
             },
-            child: Text('ListenProviderScreen'))
+            child: Text('ListenProviderScreen')),
+        ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (_) => SelectProviderScreen(),
+              ));
+            },
+            child: Text('SelectProviderScreen'))
       ]),
     );
   }
