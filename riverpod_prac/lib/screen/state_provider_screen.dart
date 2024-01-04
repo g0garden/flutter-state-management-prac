@@ -26,6 +26,13 @@ class StateProviderScreen extends ConsumerWidget {
                   child: const Text('UP')),
               ElevatedButton(
                   onPressed: () {
+                    //state 직접적으로 변경가능
+                    ref.read(numberProvider.notifier).state =
+                        ref.read(numberProvider.notifier).state - 1;
+                  },
+                  child: const Text('DOWN')),
+              ElevatedButton(
+                  onPressed: () {
                     Navigator.of(context)
                         .push(MaterialPageRoute(builder: (_) => _NextScreen()));
                   },
