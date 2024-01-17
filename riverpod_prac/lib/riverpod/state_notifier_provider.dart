@@ -9,7 +9,7 @@ final shoppingListProvider =
   (ref) => ShoppingListNotifier(),
 );
 
-//1. 상태관리하는 notifier 만들기
+//1. 상태관리하는 StateNotifier 만들기
 class ShoppingListNotifier extends StateNotifier<List<ShoppingItemModel>> {
   //생성자
   ShoppingListNotifier()
